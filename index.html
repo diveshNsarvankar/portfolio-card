@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TWYQKH6YL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,95 +11,137 @@
 
   gtag('config', 'G-5TWYQKH6YL');
 </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divesh Sarvankar | Portfolio Card</title>
-    <style>
-        body {
-            background: #0d1117;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .card {
-            background: #161b22;
-            width: 350px;
-            padding: 25px;
-            border-radius: 12px;
-            color: #fff;
-            text-align: center;
-            box-shadow: 0px 0px 18px rgba(255, 255, 255, 0.1);
-        }
-
-        h2 {
-            margin: 0;
-            font-size: 25px;
-        }
-
-        .role {
-            font-size: 14px;
-            margin-top: 4px;
-            color: #58a6ff;
-        }
-
-        .summary {
-            margin: 18px 0;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #c9d1d9;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 18px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 26px;
-        }
-
-        .contact {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #9b9b9b;
-        }
-    </style>
-
-    <!-- FontAwesome Icons -->
-    <script src="https://kit.fontawesome.com/922a83f61b.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divesh Sarvankar — Frontend Developer</title>
+  <style>
+    :root{
+      --accent:#7c3aed;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:28px;
+      background:linear-gradient(180deg,#071021 0%, #071426 100%);
+      color:#e6eef6;
+    }
+    .card{
+      width:360px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      position:relative;
+      overflow:hidden;
+      backdrop-filter: blur(6px);
+    }
+    .header{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .avatar{
+      width:64px;height:64px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#06b6d4);
+      display:grid;place-items:center;font-weight:700;font-size:20px;
+      color:white;
+      flex:0 0 64px;
+      box-shadow:0 6px 18px rgba(124,58,237,0.18), inset 0 -6px 18px rgba(0,0,0,0.25);
+    }
+    .name{display:flex;flex-direction:column}
+    .name h1{margin:0;font-size:18px;letter-spacing:0.2px}
+    .role{font-size:13px;color:var(--muted);margin-top:4px}
+    .summary{
+      margin-top:14px;font-size:13px;line-height:1.45;color:#cfe6ff;
+      max-height:5.2em;overflow:hidden;
+    }
+    .meta{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}
+    .meta .pill{
+      background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted);
+      display:flex;gap:8px;align-items:center;
+    }
+    .links{display:flex;gap:12px;margin-top:16px;align-items:center;justify-content:space-between}
+    .socials{display:flex;gap:10px;align-items:center}
+    a.icon{
+      width:42px;height:42px;border-radius:10px;display:grid;place-items:center;text-decoration:none;
+      background:rgba(255,255,255,0.02);color:inherit;border:1px solid rgba(255,255,255,0.03);
+      transition:transform .16s ease, box-shadow .16s ease;
+    }
+    a.icon:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+    .cta{display:flex;gap:8px}
+    .btn{
+      padding:9px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);
+      color:white;text-decoration:none;font-weight:600;font-size:13px;border:none;display:inline-flex;gap:8px;align-items:center;
+      box-shadow:0 8px 20px rgba(124,58,237,0.14);
+    }
+    .muted-link{font-size:13px;color:var(--muted);text-decoration:none}
+    .contact{
+      margin-top:14px;border-top:1px dashed rgba(255,255,255,0.03);padding-top:12px;display:flex;gap:10px;align-items:center;
+      justify-content:space-between;
+    }
+    .contact .left{font-size:13px;color:var(--muted)}
+    .contact .right{font-size:13px}
+    footer{margin-top:12px;text-align:center;color:var(--muted);font-size:12px}
+    @media (max-width:420px){.card{width:100%}}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Divesh Sarvankar</h2>
-        <div class="role">Penetration Tester</div>
-
-        <p class="summary">
-            Passionate cybersecurity enthusiast with a growing focus on ethical hacking and penetration testing. 
-            Constantly exploring vulnerabilities, security tools, and real-world exploitation techniques while 
-            working toward building a strong footprint in cybersecurity and offensive security roles.
-        </p>
-
-        <div class="social-icons">
-            <a href="https://github.com/diveshNsarvankar" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/divesh-sarvankar-00a5992b6" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="contact">
-            📩 Contact via LinkedIn
-        </div>
+  <div class="card" role="region" aria-label="Divesh Sarvankar portfolio card">
+    <div class="header">
+      <div class="avatar" aria-hidden="true">DS</div>
+      <div class="name">
+        <h1>Divesh Sarvankar</h1>
+        <div class="role">Frontend Developer • Web & UI Engineer</div>
+      </div>
     </div>
+
+    <p class="summary">
+      B.Sc. IT student & frontend developer focused on accessible, responsive web interfaces.
+      Skilled in HTML5 and CSS with practical experience building clean layouts and reusable
+      components. Strong attention to detail, performance and UX; collaborative team player
+      exploring security-aware frontend practices.
+    </p>
+
+    <div class="meta" aria-hidden="false">
+      <div class="pill">📍 Mumbai, India</div>
+      <div class="pill">📧 work.diveshsarvankar@gmail.com</div>
+      <div class="pill">📞 9220536238</div>
+    </div>
+
+    <div class="links">
+      <div class="socials" aria-label="social links">
+        <a class="icon" href="https://github.com/diveshNsarvankar" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <!-- GitHub SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.61 2.99 8.53 7.14 9.92.52.1.71-.23.71-.51 0-.25-.01-.91-.01-1.78-2.9.63-3.52-1.4-3.52-1.4-.48-1.23-1.17-1.56-1.17-1.56-.96-.65.07-.64.07-.64 1.06.08 1.62 1.08 1.62 1.08.94 1.62 2.47 1.15 3.07.88.09-.69.37-1.15.67-1.41-2.32-.27-4.76-1.16-4.76-5.17 0-1.14.39-2.07 1.03-2.8-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04A9.57 9.57 0 0112 6.8c.85.004 1.71.116 2.51.34 1.9-1.31 2.74-1.04 2.74-1.04.56 1.42.21 2.46.11 2.71.64.73 1.03 1.66 1.03 2.8 0 4.02-2.45 4.9-4.78 5.16.38.33.72.98.72 1.98 0 1.43-.01 2.58-.01 2.93 0 .28.19.61.72.51 4.15-1.4 7.14-5.31 7.14-9.92C23.01 5.24 18.27.5 12 .5z"/></svg>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/in/divesh-sarvankar-00a5992b6/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <!-- LinkedIn SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4v13h-4V8zm7.5 0h3.8v1.8h.1c.5-.9 1.7-1.8 3.5-1.8 3.7 0 4.4 2.4 4.4 5.5V21h-4v-6.1c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21h-4V8z"/></svg>
+        </a>
+      </div>
+
+      <div class="cta">
+        <!-- Local paths to your uploaded files - keep the HTML file in the same folder as these PDFs for download to work -->
+        <a class="btn" href="/mnt/data/DiveshSarvankarResume_copy.pdf" download="Divesh_Sarvankar_Resume.pdf" title="Download Resume">Download Resume</a>
+        <a class="muted-link" href="/mnt/data/Profile.pdf" download="Profile.pdf" title="Profile PDF">Profile</a>
+      </div>
+    </div>
+
+    <div class="contact" role="contentinfo">
+      <div class="left">Looking for frontend roles — open to internships & junior positions</div>
+      <div class="right"><a class="muted-link" href="mailto:work.diveshsarvankar@gmail.com">Email</a></div>
+    </div>
+
+    <footer>© 2025 Divesh Sarvankar · Frontend Developer</footer>
+  </div>
+
 </body>
 </html>
-
